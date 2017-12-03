@@ -11,7 +11,7 @@ spec:
         version: v2
     spec:
       containers:
-        - name: chop_demo
+        - name: app
           image: "ashvarts/chop_demo:v2.0.0"
           imagePullPolicy: Always
           ports:
