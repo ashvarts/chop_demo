@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: public
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /v3
+        backend:
+          serviceName: app-v3
+          servicePort: 80
+      - path: /v2
+        backend:
+          serviceName: app
+          servicePort: 80
