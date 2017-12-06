@@ -1,4 +1,5 @@
 import logging
+import sys
 import subprocess
 from flask import Flask
 VERSION = '2.0.0'
@@ -10,8 +11,7 @@ def hello_world():
 
 @app.route('/version')
 def version():
-    result = subprocess.Popen(['/usr/bin/env python', '--version'], stdout = subprocess.PIPE, stderr = subprocess.STDOUT)
-    return result.stdout.read()
+    return sys.version
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
