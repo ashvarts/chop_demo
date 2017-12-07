@@ -1,6 +1,5 @@
 import logging
-import sys
-import subprocess
+import platform
 from flask import Flask
 VERSION = '2.0.0'
 app = Flask(__name__)
@@ -11,7 +10,7 @@ def hello_world():
 
 @app.route('/version')
 def version():
-    return sys.version
+    return "Python Version: %s \n" % platform.python_version()
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)

@@ -8,7 +8,6 @@ spec:
     metadata:
       labels:
         name: app
-        version: v2
     spec:
       containers:
         - name: app
