@@ -11,7 +11,7 @@ spec:
       paths:
       - path: /v2
         backend:
-          serviceName: app
+          serviceName: app-v2
           servicePort: 80
       - path: /v3
         backend:
